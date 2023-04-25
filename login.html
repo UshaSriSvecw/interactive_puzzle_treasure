@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animated Login Form | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+  </head>
+  <body>
+  
+    <div class="center">
+      <h1>Login As a Player</h1>
+      <form method="post" action="./clue1.html">
+        <div class="txt_field">
+          <input type="text" name="userlogin" id="ema" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" name="userpassword" id="pass" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        
+        <input type="submit" value="Login" onclick="admin.js" />
+        <div class="signup_link">
+          Not a member? <a href="register.html">Signup</a>
+        </div>
+        <div class="signup_link">
+          Are u Admin? <a href="admin.html">Admin Login</a>
+        </div>
+
+      </form>
+    </div>
+    <!--
+    <script>
+      function auth(){
+     var email=document.getElementById("ema").value;
+     var password=document.getElementById("pass").value;
+     if(email =="admin@gmail.com" && password =="admin@123"){
+      
+      alert("Login Successfull");
+      document.location.href="clue1.html";
+     }
+     else{
+      alert("Login Failed");
+      return;
+     }
+      }
+    </script>
+  -->
+  </body>
+</html>

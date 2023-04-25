@@ -1,0 +1,194 @@
+#grid {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: repeat(5, 50px);
+    grid-gap: 10px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 270px;
+  }
+  
+  
+  .square {
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+  
+  .square.black {
+    background-color: black;
+  }
+    
+  #info {
+    margin-bottom: 20px;
+  }
+
+  #info p{
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #moves-left {
+    font-size: x-large;
+    color: rgb(10, 4, 4);
+    font-weight: bold;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #011f34;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #010101;
+  }
+  
+  /* Animate the scores */
+  @keyframes scoreScale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  #best-score,
+  #current-score {
+    display: none;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  #best-score {
+    display: none;
+    animation-name: scoreScale;
+  }
+  
+  #current-score {
+    display: none;
+    animation-name: scoreScale;
+  }
+
+
+  /* Animate the squares */
+  @keyframes squareFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes squareFadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .square {
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .square {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .square.flipped {
+    animation-name: squareFadeIn;
+  }
+  
+  .square.unflipped {
+    animation-name: squareFadeOut;
+  }
+  
+  /* Animate the background */
+  @keyframes bgGradient {
+    0% {
+      background: linear-gradient(to right, #6495ED, #FFA07A);
+    }
+    50% {
+      background: linear-gradient(to right, #FFA07A, #FFC0CB);
+    }
+    100% {
+      background: linear-gradient(to right, #FFC0CB, #6495ED);
+    }
+  }
+  
+  body {
+    animation-duration: 30s;
+    animation-name: bgGradient;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  /* Animate the reset button */
+  @keyframes resetButtonRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  #reset-button {
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-name: resetButtonRotate;
+  }
+
+  
+  /* Animate the moves left counter */
+  @keyframes movesLeftBounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  #moves-left {
+    animation-duration: 0.5s;
+  }
+
+  @keyframes selectedSquareSpin {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+    }
+    .square.selected {
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-name: selectedSquareSpin;
+    }

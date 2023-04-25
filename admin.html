@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animated Login Form | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login As Admin</h1>
+      <form method="get" method="leader.html">
+        <div class="txt_field">
+          <input type="text" name="userlogin" id="ema" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" name="userpassword" id="pass" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div>&nbsp;</div>
+        <input type="submit" value="Login" onclick="auth()" />
+       <div>&nbsp;</div>
+      </form>
+    </div>
+    
+    <script>
+    function auth(){
+     var email=document.getElementById("ema").value;
+     var password=document.getElementById("pass").value;
+     if(email =="admin@gmail.com" && password =="admin@123"){
+      
+      
+      window.location.href == "C:/Users/Usha Sri/Downloads/Hidden-code/leader.html";
+      alert("Login Successfull");
+    
+     }
+     else{
+      alert("Login Failed");
+      return;
+     }
+      }
+    </script>
+  
+  </body>
+</html>
